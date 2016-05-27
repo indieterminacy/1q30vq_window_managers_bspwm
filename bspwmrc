@@ -10,7 +10,12 @@ bspc config pointer_follows_monitor true
 bspc config auto_alternate          true
 
 # see https://github.com/baskerville/bspwm/issues/143#issuecomment-42646522
-bspc monitor -d • • • • • • • • • •
+# bspc monitor -d • • • • • • • • • •
+
+bspc monitor VGA1 -d  I II III IV V VI VII VIII IX X
+# bspc monitor LVDS1 -d X
+bspc monitor HDMI1 -d I II III IV V VI VII VIII IX X
+
 trap 'jobs -p | xargs kill' EXIT
 
 ~/.config/bspwm/init &
