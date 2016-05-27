@@ -1,7 +1,7 @@
 #!/bin/bash
 trap 'jobs -p | xargs kill' EXIT
 
-compton=~/.compton/
+compton=~/.config/bspwm/compton.conf
 dunst=/usr/local/bin/
 
 bspdir=$(dirname $(readlink -f $0))
@@ -20,7 +20,7 @@ if $(hash mpd); then
 fi
 
 # gnome settings daemon (for fonts and gtk styling)
-gnome-settings-daemon &
+# gnome-settings-daemon &
 
 # set background
 # gsettings set org.gnome.desktop.background picture-uri file:///home/user/Pictures/wallpaper.png
@@ -29,8 +29,8 @@ $bspdir/misc/terminal_transparency 6
 feh --bg-tile $bspdir/wallpaper.jpg &
 
 #  gnome-terminal -e ranger &
-cd $HOME &&
-    gnome-terminal -e ranger &
+# cd $HOME &&
+#     gnome-terminal -e ranger &
 
 [[ -e $dunst/dunst ]] \
     && $dunst/dunst -config $bspdir/panels/dunstrc &

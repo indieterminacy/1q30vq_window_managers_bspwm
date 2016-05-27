@@ -1,0 +1,39 @@
+
+
+For the first part, why not just start vlc later:
+urxvtc -name rtorrent -e rtorrent
+#presel right
+bspc window -p right
+urxvtc -name URthree
+#presel up
+bspc window -p up
+vlc &
+For the second part, `bspc window -e left RATIO` should work. However, if you are already using presel, you could just add `-r RATIO` flags to the presel commands.
+
+
+
+Almehdin wrote:
+bspc window -r 50 -e left push or something similar.
+Probably:
+bspc window -e left 0.5
+
+
+tbuck153 wrote:
+What happened to being able to move a window into the preselected area?
+The new way for doing this is:
+bspc window -w last.manual
+
+Add this to your bspwmrc:
+bspc rule -a Kupfer.py --focus
+
+
+
+.xinitrc is as follows:
+[ -e /tmp/panel-fifo ] && rm /tmp/panel-fifo
+mkfifo /tmp/panel-fifo
+bspwm -s /tmp/panel-fifo
+
+fedemp wrote:
+bspwm -s /tmp/panel-fifo
+This will work better:
+bspwm -s /tmp/panel-fifo -p

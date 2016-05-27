@@ -1,0 +1,6 @@
+#! /bin/sh
+
+# rules
+bspc rule -a URxvtScratch sticky=on floating=on
+bspc monitor -d I II III IV V VI VII VIII IX X
+
