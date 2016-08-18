@@ -13,10 +13,10 @@ bspc config auto_alternate          true
 # bspc monitor -d • • • • • • • • • •
 
 bspc monitor VGA1 -d  I II III IV V VI VII VIII IX X
-# bspc monitor LVDS1 -d X
+# bspc monitor LVDS1 -d  I II III IV V VI VII VIII IX X
+bspc monitor LVDS1 -d X
 bspc monitor HDMI1 -d I II III IV V VI VII VIII IX X
-
-trap 'jobs -p | xargs kill' EXIT
+# trap 'jobs -p | xargs kill' EXIT
 
 ~/.config/bspwm/init &
 
