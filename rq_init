@@ -24,28 +24,25 @@ fi
 
 # set background
 # gsettings set org.gnome.desktop.background picture-uri file:///home/user/Pictures/wallpaper.png
-$bspdir/misc/terminal_transparency 6
+$bspdir/iq_utilities/terminal_transparency 6
 
-feh --bg-tile $bspdir/wallpaper.jpg &
-
-#  gnome-terminal -e ranger &
-# cd $HOME &&
-#     gnome-terminal -e ranger &
+# feh --bg-tile $bspdir/wallpaper.jpg &
+feh --bg-tile ~/.config/tq_wallpaper &
 
 [[ -e $dunst/dunst ]] \
-    && $dunst/dunst -config $bspdir/panels/dunstrc &
+    && $dunst/dunst -config $bspdir/vq_panels/dunstrc &
 
 # launch compton compositor
 [[ -e $compton/compton ]] \
   && $compton/compton --config $bspdir/compton.conf &
 
 # launch dzen2 panels
-$bspdir/panels/topbar &
-    $bspdir/panels/status &
+$bspdir/vq_panels/topbar &
+    $bspdir/vq_panels/status &
 
 # launch battery checker
-$bspdir/misc/battery_alert &
+# $bspdir/iq_utilities/battery_alert &
 
-sleep 5 && $bspdir/misc/hide dzen2-bottom-status-bar
+sleep 5 && $bspdir/iq_utilities/hide dzen2-bottom-status-bar
 
 wait

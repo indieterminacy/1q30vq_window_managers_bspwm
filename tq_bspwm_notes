@@ -1,5 +1,4 @@
 
-
 For the first part, why not just start vlc later:
 urxvtc -name rtorrent -e rtorrent
 #presel right
@@ -9,7 +8,6 @@ urxvtc -name URthree
 bspc window -p up
 vlc &
 For the second part, `bspc window -e left RATIO` should work. However, if you are already using presel, you could just add `-r RATIO` flags to the presel commands.
-
 
 
 Almehdin wrote:
@@ -27,11 +25,11 @@ Add this to your bspwmrc:
 bspc rule -a Kupfer.py --focus
 
 
-
 .xinitrc is as follows:
 [ -e /tmp/panel-fifo ] && rm /tmp/panel-fifo
 mkfifo /tmp/panel-fifo
 bspwm -s /tmp/panel-fifo
+
 
 fedemp wrote:
 bspwm -s /tmp/panel-fifo
