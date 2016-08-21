@@ -2,7 +2,7 @@
 lang=("us" "es" "fr")
 lang_file=~/.config/bspwm/log/lang
 log=~/.config/bspwm/log/playing.log
-selector=~/.config/bspwm/misc/select.sh
+selector=~/.config/bspwm/iq_utilities/select.sh
 default_lang=us
 
 log() {

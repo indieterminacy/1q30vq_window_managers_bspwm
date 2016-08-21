@@ -1,11 +1,13 @@
 #!/bin/bash
 trap 'jobs -p | xargs kill' EXIT
 
-compton=~/.config/bspwm/compton.conf
-dunst=/usr/local/bin/
+# compton=~/.config/compton.conf
+compton=/usr/bin/compton
+# dunst=/usr/local/bin/
+dunst=/usr/bin/dunst
 
-bspdir=$(dirname $(readlink -f $0))
-cd $bspdir
+# bspdir=$(dirname $(readlink -f $0))
+# cd $bspdir
 
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
@@ -24,25 +26,27 @@ fi
 
 # set background
 # gsettings set org.gnome.desktop.background picture-uri file:///home/user/Pictures/wallpaper.png
-$bspdir/iq_utilities/terminal_transparency 6
+~/,config/iq_utilities/terminal_transparency 6
 
-# feh --bg-tile $bspdir/wallpaper.jpg &
-feh --bg-tile ~/.config/tq_wallpaper &
+feh --bg-tile ~/.config/bspwm/wallpaper.jpg &
+# feh --bg-tile ~/.config/tq_wallpaper &
 
-[[ -e $dunst/dunst ]] \
-    && $dunst/dunst -config $bspdir/vq_panels/dunstrc &
+# [[ -e $dunst ]] \
+#     && $dunst -config $bspdir/vq_panels/dunstrc &
+dunst -config $bspdir/vq_panels/dunstrc &
 
 # launch compton compositor
-[[ -e $compton/compton ]] \
-  && $compton/compton --config $bspdir/compton.conf &
+# [[ -e $compton]] \
+    # && $compton --config ~/config/compton.conf &
+compton --config ~/config/compton.conf &
 
 # launch dzen2 panels
-$bspdir/vq_panels/topbar &
-    $bspdir/vq_panels/status &
+~/.config/bspwm/vq_panels/topbar &
+~/.config/bspwm/vq_panels/status &
 
 # launch battery checker
 # $bspdir/iq_utilities/battery_alert &
 
-sleep 5 && $bspdir/iq_utilities/hide dzen2-bottom-status-bar
+# sleep 5 && $bspdir/iq_utilities/hide dzen2-bottom-status-bar
 
 wait

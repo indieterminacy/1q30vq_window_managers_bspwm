@@ -21,3 +21,5 @@ trap 'jobs -p | xargs kill' EXIT
 ~/.config/bspwm/rq_init &
 
 wait
+
+xrandr --output LVDS1 --off

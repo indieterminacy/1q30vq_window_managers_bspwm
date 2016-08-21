@@ -1,3 +1,3 @@
 #!/bin/bash
-~/.config/bspwm/misc/playing
+~/.config/bspwm/iq_utilities/playing
 #ncmpcpp --now-playing
