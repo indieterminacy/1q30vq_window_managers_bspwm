@@ -1,7 +1,8 @@
 #!/bin/zsh
 font='lucidasans-8'
 panel='dzen2-bottom-status-bar'
-conky_config="$HOME/.config/bspwm/vq_panels/conkyrc"
+conky_config="$HOME/.config/conky/conky.conf"
+# conky_config="$HOME/.config/bspwm/vq_panels/conkyrc"
 
 color='#FFFFFF'
 background='#000000'
