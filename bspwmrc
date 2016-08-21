@@ -87,6 +87,6 @@ compton &
 
 # sleep 5 && $bspdir/iq_utilities/hide dzen2-bottom-status-bar
 
-# wait
-xrandr --output LVDS-1 --off
+wait
+# xrandr --output LVDS-1 --off
 
