@@ -18,8 +18,8 @@ bspc monitor VGA-1 -d I II III IV V VI VII VIII IX X
 # bspc monitor HDMI1 -d I II III IV V VI VII VIII IX X
 trap 'jobs -p | xargs kill' EXIT
 
-~/.config/bspwm/rq_init &
+~/.config/bspwm/init &
 
 wait
 
-xrandr --output LVDS1 --off
+# xrandr --output LVDS1 --off

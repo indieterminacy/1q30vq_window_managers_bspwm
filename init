@@ -26,7 +26,7 @@ fi
 
 # set background
 # gsettings set org.gnome.desktop.background picture-uri file:///home/user/Pictures/wallpaper.png
-~/,config/iq_utilities/terminal_transparency 6
+~/.config/iq_utilities/terminal_transparency 6
 
 feh --bg-tile ~/.config/bspwm/wallpaper.jpg &
 # feh --bg-tile ~/.config/tq_wallpaper &
@@ -38,7 +38,8 @@ dunst -config $bspdir/vq_panels/dunstrc &
 # launch compton compositor
 # [[ -e $compton]] \
     # && $compton --config ~/config/compton.conf &
-compton --config ~/config/compton.conf &
+# compton --config ~/config/compton.conf &
+compton &
 
 # launch dzen2 panels
 ~/.config/bspwm/vq_panels/topbar &
