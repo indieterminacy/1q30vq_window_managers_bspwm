@@ -4,4 +4,3 @@ if [ $# -lt 1 ]; then
 fi
 window_name=$1
 xdotool search --onlyvisible --name "$window_name" windowunmap %@ || xdotool search --name "$window_name" windowmap %@
-

@@ -14,6 +14,8 @@ while read -r line ; do
         fi
     done
     # printf "%s\n" "$desktop $title $clock $hidden $lang $mail ^i($HOME/.config/bspwm/fq_icons/mail.xbm)"
-    printf "%s\n" "$desktop $title ^pa($center_indent)$clock^pa($right_indent)$hidden $lang $mail ^i($HOME/.config/bspwm/fq_icons/mail.xbm)"
+    printf "%s\n" "$desktop $title \
+    ^pa($center_indent)$clock^pa($right_indent)$hidden $lang $mail \
+    ^pq($HOME/.config/bspwm/fq_icons/mail.xbm)"
 done
 

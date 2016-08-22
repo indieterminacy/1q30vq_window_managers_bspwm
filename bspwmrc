@@ -85,7 +85,7 @@ compton &
 # launch battery checker
 # $bspdir/iq_utilities/battery_alert &
 
-# sleep 5 && $bspdir/iq_utilities/hide dzen2-bottom-status-bar
+sleep 5 && ~/.config/bspwm/iq_utilities/hide dzen2-bottom-status-bar
 
 wait
 # xrandr --output LVDS-1 --off
