@@ -1,0 +1,21 @@
+#! /bin/sh
+if ! rulc -l > /dev/null ; then
+(setsid ruld &)
+while ! rulc -l > /dev/null ; do
+sleep 0.1
+done
+fi
+# Add custom rules here
+rules=$(rulc -l)
+if [ -z "$rules" ] ; then
+rulc -a 'class=="trayer"' 'manage=off frame=off'
+rulc -a 'class=="Keepassx"' 'floating=on'
+rulc -a 'class=="Pavucontrol"' 'floating=on'
+rulc -a 'class=="Nm-connection-editor"' 'floating=on'
+rulc -a 'class=="Transmission-gtk"' 'floating=on'
+rulc -a 'class=="VirtualBox"' 'floating=on'
+rulc -a 'class=="Nitrogen"' 'floating=on'
+rulc -a 'class=="Dolphin-emu"' 'floating=on'
+rulc -a 'class=="Pcsx2"' 'floating=on'
+rulc -a 'class=="Desmume"' 'floating=on'
+fi
